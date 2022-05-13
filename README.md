@@ -2,7 +2,7 @@
  * @Author: Leonard
  * @Date: 2022-05-08 09:08:28
  * @LastEditors: Leonard
- * @LastEditTime: 2022-05-13 07:36:49
+ * @LastEditTime: 2022-05-13 08:44:58
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /dart_learn/README.md
 -->
@@ -28,7 +28,12 @@ class PilotedCraft extends Spacecraft with Piloted {
 
 4. late 关键字
 ```
-// 延迟赋值，确定变量在使用前被赋值，在处理循环引用很有帮助：
+// 延迟赋值，确定变量在使用前被赋值
+// 应用场景1:变量可能不使用，但是初始化很昂贵
+```
+late String temperature = _readThermometer(); // Lazily initialized.
+```
+// 应用场景2:在处理循环引用很有帮助：
 class Team {
   late final Coach coach;
 }
