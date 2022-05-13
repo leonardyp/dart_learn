@@ -2,7 +2,7 @@
  * @Author: Leonard
  * @Date: 2022-05-08 09:08:28
  * @LastEditors: Leonard
- * @LastEditTime: 2022-05-13 08:44:58
+ * @LastEditTime: 2022-05-13 10:58:34
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /dart_learn/README.md
 -->
@@ -57,6 +57,6 @@ void main() {
 
 7. 空安全：?可空 !非空  
     int x = nullableButNotNullInt!
-8. Dart 支持泛型，比如 List<int>（表示一组由 int 对象组成的列表）或 List<Object>（表示一组由任何类型对象组成的列表）。
+8. Dart 支持泛型，比如 `List<int>`（表示一组由 int 对象组成的列表）或 `List<Object>`（表示一组由任何类型对象组成的列表）。
 
 9. 私有成员： 标识符以下划线 (_) 开头
