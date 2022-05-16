@@ -2,7 +2,7 @@
  * @Author: Leonard
  * @Date: 2022-05-14 09:59:02
  * @LastEditors: Leonard
- * @LastEditTime: 2022-05-15 10:21:53
+ * @LastEditTime: 2022-05-16 13:22:21
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /dart_learn/common.md
 -->
@@ -194,4 +194,23 @@ var listOfStrings = ['0', for (var i in listOfInts) 'demo:$i'];
   } finally {
     cleanLlamaStalls(); // Then clean up.
   }
+  ```
+- class
+  > 两个使用相同构造函数相同参数值构造的编译时常量是同一个对象：
+  ```dart
+  var a = const ImmutablePoint(1, 1);
+  var b = const ImmutablePoint(1, 1);
+
+  assert(identical(a, b)); // They are the same instance!
+  ```
+  > 实例变量：
+  ```dart
+  class Point {
+    double? x; // Declare instance variable x, initially null.
+    double? y; // Declare y, initially null.
+    double z = 0; // Declare z, initially 0.
+  }
+  // 所有未初始化的实例变量其值均为 null。
+  // 构造函数不被继承，子类不会继承父类的构造函数，如果子类没有声明构造函数，那么只会有一个默认无参数的构造函数。
+  
   ```
